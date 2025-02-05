@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mealsData"></div>
+    
+</body>
+</html>
+<script>
+
+    async function fetchData(){
+        try{
+
+            let res=await fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+
+            let data=await res.json()
+
+            console.log(data)
+
+        }catch(e){
+            console.log('fetching Data failed')
+        }
+    }
+
+    function showData(data){
+        document.getElementById('mealsData').innerHTML=''
+
+        
+
+
+    }
+    fetchData()
+
+</script>
