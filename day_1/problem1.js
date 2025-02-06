@@ -18,19 +18,14 @@ const employees = [
         return ele;
     }
   })
-  console.log(activeEmployees)
-
-  let groupby=activeEmployees.reduce((acc,curr)=>{
-    let dept=curr.department;
-    if(!acc[dept]){
-      acc[dept]=[];
-    }
-    acc[dept].push(curr);
-    return acc; 
-  },{})
-
-  let sortedEmployees=activeEmployees.sort((a,b)=>b.salary-a.salary)
-
-  console.log(sortedEmployees)
+  // console.log(activeEmployees)
 
   
+
+  const result = Object.groupBy(activeEmployees, ({ department }) => department)
+
+  console.log(result)
+  
+  let sortbySalary=result.sort((a,b)=>{
+    return b.reduce((acc,curr)=>acc+curr.salary,0)-a.reduce((acc,curr)=>acc+curr.salary,0)
+  })
