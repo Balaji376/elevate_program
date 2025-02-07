@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style src="index.css"></style>
+     
+</head>
+<style>
+    #task {
+    width:50%;
+    height:auto;
+    margin :auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(192, 238, 238);
+    border-radius: 10px;
+    padding:20px;
+}
+
+input[type="text"], select {
+   
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: bold;
+}
+button{
+    background-color: gray;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+@media screen {
+    
+}
+</style>
+
+<body>
+    <div id="task">
+       <h1>Task</h1>
+        <label for="title">Title:</label>
+        <input type="text" id="title" placeholder="Enter Your title here..." />
+        <label for="description">Description:</label>
+        <input type="text" id="description" placeholder="Enter Your description here..." />
+
+        <label for="">Choose a priority:</label>
+
+        <select name="priority" id="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+
+        </select>
+     <button type="submit" id="Button">Add Task</button>
+    </div>
+</body>
+
+</html>
+<script>
+
+    let task=document.getElementById('task')
+    let title=document.getElementById('title').value;
+
+    let description=document.getElementById('description').value;
+    let priority=document.getElementById('priority').value;
+
+    let AddTask=document.getElementById('button')
+    
+   
+    
+    AddTask.addEventListener('click',()=>{
+
+        let newTask=document.createElement('div');
+        newTask.classList.add('task')
+        newTask.innerHTML+=`
+        <h2>Title :${title}</h2>
+        <p>Description :${description}</p>
+        <p>Prority :${porority}/<p>
+        `
+        task.append(newTask)
+    })
+</script>
