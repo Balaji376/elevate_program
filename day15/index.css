@@ -1,0 +1,60 @@
+
+#container{
+    width: 1000px;
+    height: 100px;
+    background-color: rgb(255, 115, 0);
+    border-radius: 40px;
+    margin: auto;
+    padding: 50px;
+    margin-bottom: 20px;
+
+}
+#container> h1{
+    text-align: center;
+}
+
+#container > label{
+    font-size: larger;
+
+}
+
+#container > input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+
+}
+
+#container > select {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+#container > button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(35, 33, 31);
+    color: white;
+    cursor: pointer;
+}
+
+#display{
+    margin-bottom: 20px;
+    width: 1200px;
+    background-color: rgb(213, 234, 234);
+    border-radius: 20px;
+    margin: auto;
+    display: grid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    grid-template-columns: repeat(3fr,auto);
+}
+
+.card {
+    width: 300px;
+    height: 250px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+}

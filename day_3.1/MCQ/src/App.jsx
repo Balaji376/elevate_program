@@ -1,18 +1,21 @@
-import { useState } from 'react'
+
 
 
 import './App.css'
 
-import ShowMcq from './component/showMeq'
-import Timer from './component/time'
+import TableFormate from './styles/tableFormate'
+
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
    <>
-   <ShowMcq/>
-   
+
+<TableFormate/>
    </>
   )
 }
