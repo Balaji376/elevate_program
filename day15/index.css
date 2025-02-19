@@ -47,13 +47,14 @@
     border-radius: 20px;
     margin: auto;
     display: grid;
+    grid-template-columns: repeat(3fr ,300px);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    grid-template-columns: repeat(3fr,auto);
+   
 }
 
 .card {
     width: 300px;
-    height: 250px;
+    height: auto;
     padding: 30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 20px;
